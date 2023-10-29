@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-4">
+        <div class="container-xl px-4">
+            <div class="page-header-content pt-3">
+                <div class="row align-items-center justify-content-between">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto mt-4">
+                            <h1 class="page-header-title">
+                                Módulo Alumnos
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="row">
+        <div class="container col-12">
+            <div class=" card">
+                <div class="card-body">
+                    <div class="form-body">
+                        <form>
+                            <div class="row gx-3 mb-3">
+                                <div class="col-md-4">
+                                    Fecha desde:
+                                    <input class="form-control" type="date" />
+                                </div>
+                                <div class="col-md-4">
+                                    Fecha hasta:
+                                    <input class="form-control" type="date" />
+                                </div>
+
+                            </div>
+                            <div class="row gx-2 mb-2">
+                                <div class="col-md-2">
+                                    <button class="btn btn-primary" type="button"><i class="fas fa-search"></i> Consultar</button>
+                                </div>
+                                <div class="col-md-5">
+                                    <a class="btn btn-success" href="@Url.Action("AgregarAlumno", "Alumno")"><i class="fas fa-plus"></i> Agregar Alumno</a>
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+
+                    <div class="card mb-auto mt-2">
+                        <div class="card-header">Listado de Alumnos</div>
+                        <div class="card-body p-2">
+                            <!--Tabla-->
+                            <div class="datatable" style="padding-top: 20px">
+                                <table class="table table-bordered table-hover" width="100%" id="tblAlumnos">
+                                    <thead>
+                                        <tr>
+                                            <th>Codigo</th>
+                                            <th>Direccion</th>
+                                            <th>Grado</th>
+                                            <th>Seccion</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbAlumno">
+                                        <tr>
+                                            <td>001</td>
+                                            <td>Barrio Santa Lucia</td>
+                                            <td>8</td>
+                                            <td>D</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-primary dropdown-toggle" type="button" id="item1" data-toggle="dropdown" aria-expanded="false">
+                                                        Acciones
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="item1">
+                                                        <li><a class="dropdown-item" href="#"><i data-feather="edit"></i>Editar</a></li>
+                                                        <li><a class="dropdown-item" href="#"><i data-feather="trash-2"></i>Eliminar</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+

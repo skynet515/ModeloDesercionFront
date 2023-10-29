@@ -1,0 +1,34 @@
+﻿<div class="row gx-3 mb-3">
+    <div class="col-md-6">
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="anexo-archivos" lang="es" multiple accept=".png, .jpg, .jpeg, .pdf, .doc, .docx, .xls, .xlsx" />
+            <label class="custom-file-label" id="anexo-label" for="anexo-archivos">Buscar archivo</label>
+        </div>
+        <span id="val-archivos" class="text-danger" hidden>Seleccione un archivo</span>
+    </div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-success btn-block" id="anexo-btnAgregar">
+            <span class="spinner-border spinner-border-sm spinner-border-sm" role="status" aria-hidden="true" hidden></span>
+            Agregar
+        </button>
+    </div>
+</div>
+<div class="card shadow-none mb-5">
+    <div class="card-header">
+        Documentos adjuntos
+    </div>
+    <div class="card-body">
+        <!--Tabla-->
+        <div class="datatable table-responsive">
+            <table class="table table-bordered table-hover" id="anexo-tabla" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Tipo Documento</th>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
