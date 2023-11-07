@@ -37,7 +37,7 @@
                             }),
                             success: function (data) {
                                 if (data.request) {
-                                    NotificacionSimple("Bienvenido", "Esta cargando su espacio de trabajo", "2000", url + "Home/Index");
+                                    NotificacionSimple("Bienvenido", "Esta cargando su espacio de trabajo", "2000", urlInterna + "Home/Index");
                                 } else {
                                     MensajeDeError("Ha ocurrido un Error");
                                 }
