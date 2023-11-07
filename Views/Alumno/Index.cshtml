@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+   
+}
+<style>
+    .rojo {
+        color: red;
+    }
+
+    .verde {
+        color: green;
+    }
+</style>
+
+<main>
+    <header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-4">
+        <div class="container-xl px-4">
+            <div class="page-header-content pt-3">
+                <div class="row align-items-center justify-content-between">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto mt-4">
+                            <h1 class="page-header-title">
+                                Módulo Alumnos
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="row">
+        <div class="container col-12">
+            <div class=" card">
+                <div class="card-body">
+                    <div class="form-body">
+                        <form>
+                            <div class="row gx-3 mb-3">
+                                <div class="col-md-4">
+                                    Fecha desde:
+                                    <input class="form-control" type="date" />
+                                </div>
+                                <div class="col-md-4">
+                                    Fecha hasta:
+                                    <input class="form-control" type="date" />
+                                </div>
+
+                            </div>
+                            <div class="row gx-2 mb-2">
+                                <div class="col-md-2">
+                                    <button class="btn btn-primary" type="button"><i class="fas fa-search"></i> Consultar</button>
+                                </div>
+                                <div class="col-md-5">
+                                    <a class="btn btn-success" href="@Url.Action("AgregarAlumno", "Alumno")"><i class="fas fa-plus"></i> Agregar Alumno</a>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div class="card mb-auto mt-2">
+                        <div class="card-header">Listado de Alumnos</div>
+                        <div class="card-body p-2">
+                            <!--Tabla-->
+                            <div class="datatable" style="padding-top: 20px">
+                                <table class="table table-bordered table-hover" width="100%" id="tblAlumnos">
+                                    <thead>
+                                        <tr>
+                                            <th>Codigo</th>
+                                            <th>Direccion</th>
+                                            <th>Convivencia Familiar</th>
+                                            <th>Tipo de Residencia</th>
+                                            <th>Probabilidad Deserción</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbAlumno">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@Scripts.Render("~/Content/Alumnos")
+

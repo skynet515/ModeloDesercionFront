@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewBag.Title = "AgregarMatricula";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <header class="page-header page-header-compact page-header-light border-bottom bg-white mb-4">
+        <div class="container-xl px-4">
+            <div class="page-header-content">
+                <div class="row align-items-center justify-content-between pt-3">
+                    <div class="col-auto mb-3">
+                        <h1 class="page-header-title">
+                            Agregar Matrícula
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="row">
+        <div class="col-xxl-8">
+            <div class="card mb-4">
+                <div class="card-header border-bottom">
+                    <ul class="nav nav-tabs card-header-tabs" id="dashboardNav" role="tablist">
+                        <li class="nav-item me-1"><a class="nav-link navMatricula active" id="Matricula-pill" href="#Matricula" data-toggle="tab" role="tab" aria-controls="Matricula" aria-selected="true">Datos Generales</a></li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content" id="dashboardNavContent">
+                        <div class="tab-pane paneDatosPlanes fade show active" id="Matricula" role="tabpanel" aria-labelledby="Matricula-pill">
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            Información de la Matrícula
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="form-body">
+                                                <form>
+                                                    <div class="row gx-3 mb-3">
+                                                        <div class="col-md-5">
+                                                            <label class="large mb-1" for="slcGrado">Grado a Matricular: </label>
+                                                            <select class="form-control selectSearch" id="slcGrado">
+                                                                <option selected disabled>--Seleccione--</option>
+                                                            </select>
+                                                            <span id="val-cons-slcGrado" class="text-danger" hidden>El grado es requerido.</span>
+
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <label class="large mb-1" for="slcAlumno">Seleccione Alumno: </label>
+                                                            <select class="form-control selectSearch" id="slcAlumno">
+                                                                <option selected disabled>--Seleccione--</option>
+                                                               
+                                                            </select>
+                                                            <span id="val-cons-slcAlumno" class="text-danger" hidden>El Alumno es requerido.</span>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="row gx-3 mb-3">
+                                                        <div class="col-md-5">
+                                                            <label class="large mb-1" for="slcTurno">Seleccione un Turno: </label>
+                                                            <select class="form-control selectSearch" id="slcTurno">
+                                                                <option selected disabled>--Seleccione--</option>
+                                                                
+                                                            </select>
+                                                            <span id="val-cons-slcTurno" class="text-danger" hidden>El turno es requerido.</span>
+
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <label class="large mb-1" for="slcModalidad">Seleccione una Modalidad: </label>
+                                                            <select class="form-control selectSearch" id="slcModalidad">
+                                                                <option selected disabled>--Seleccione--</option>
+                                                            </select>
+                                                            <span id="val-cons-slcModalidad" class="text-danger" hidden>La modalidad es requerida.</span>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="row gx-3 mb-3">
+                                                        <div class="col-md-5">
+                                                            <label class="large mb-1" for="slcInstitucion">Seleccione una institucion: </label>
+                                                            <select class="form-control selectSearch" id="slcInstitucion">
+                                                                <option selected disabled>--Seleccione--</option>
+                                                            </select>
+                                                            <span id="val-cons-slcTurno" class="text-danger" hidden>La institución requerida.</span>
+
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md-12 text-right mt-4">
+                                                        <button class="btn btn-primary" type="button" id="btnAgregarMatricula">
+                                                            <svg class="svg-inline--fa fa-check fa-w-16 text-white" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path></svg>
+                                                            Guardar
+                                                        </button>
+                                                        <button class="btn btn-success" type="button">
+                                                            <svg class="svg-inline--fa fa-check fa-w-16 text-white" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path></svg>
+                                                            Guardar y volver a la lista
+                                                        </button>
+                                                        <a class="btn btn-danger" href="@Url.Action("Index", "Matricula")">
+                                                            <svg class="svg-inline--fa fa-times fa-w-11 text-white" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" data-fa-i2svg=""><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+                                                            Cancelar
+                                                        </a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@Scripts.Render("~/Content/Matriculas")
