@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Foro</title>
     @Styles.Render("~/Content/sitecss")
-   
+
 
     @* Sweet Alert 2 *@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.0/dist/sweetalert2.all.min.js"></script>
@@ -48,7 +48,7 @@
                                             <input type="password" class="form-control form-control-solid" placeholder="Clave" id="txtClave" />
                                             <span id="val-cons-clave" class="text-danger" hidden>La Clave es requerida.</span>
                                         </div>
-                                        <button  class="btn btn-block btn-primary" id="btnIngresarLogin">Ingresar</button>
+                                        <button class="btn btn-block btn-primary" id="btnIngresarLogin">Ingresar</button>
 
                                     </div>
                                     <div class="card-footer text-center">
@@ -76,7 +76,7 @@
             $.validator.unobtrusive.parse("form");
         });
     </script>
-    <input type="hidden" id="hdnBaseUrl" value="192.168.1.249:1050/" />
+    <input type="hidden" id="hdnBaseUrl" value="http://localhost:1050/" />
     <input type="hidden" id="hdnUrlUs" value="@urlBase" />
 </body>
 </html>

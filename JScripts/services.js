@@ -1,13 +1,13 @@
 ﻿$(document).ready(function () {
     var session = [];
     $("#btnIngresarLogin").on("click", function () {
-        var baseUrl = $("#hdnBaseUrl").val();
+        //var baseUrl = $("#hdnBaseUrl").val();
         var urlInterna = $("#hdnUrlUs").val();
 
         if (fnValidarCamposLoging()) {
 
             $.ajax({
-                url: baseUrl + "login/",
+                url: urlInterna + "Usuario/Index",
                 type: "POST",
                 dataType: 'JSON',
                 contentType: 'application/json',
@@ -23,27 +23,7 @@
 
                     DesbloquearUI();
                     if (data != null) {
-                        //fnGrabarSesion(data.success.idUsuario);
-                        console.log(data)
-                        session = data;
-                        $.ajax({
-                            url: urlInterna + "Usuario/GrabarSesion",
-                            type: "POST",
-                            dataType: "JSON",
-                            contentType: 'application/json',
-                            dataType: 'json',
-                            data: JSON.stringify({
-                                usuario: session
-                            }),
-                            success: function (data) {
-                                if (data.request) {
-                                    NotificacionSimple("Bienvenido", "Esta cargando su espacio de trabajo", "2000", urlInterna + "Home/Index");
-                                } else {
-                                    MensajeDeError("Ha ocurrido un Error");
-                                }
-                            }
-                        });
-
+                        NotificacionSimple("Bienvenido", "Esta cargando su espacio de trabajo", "2000", urlInterna + "Home/Index");
 
                     } else {
                         MensajeDeError("Usuario o contraseña Incorrecta");
